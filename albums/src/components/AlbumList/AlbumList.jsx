@@ -5,6 +5,8 @@ import {
 } from 'react-native'
 import axios from 'axios'
 
+import AlbumDetail from '../AlbumDetail'
+
 import styles from './style'
 
 
@@ -32,13 +34,7 @@ class AlbumList extends Component {
   renderAlbum() {
     const { list, loading } = this.state
 
-    if (loading) {
-      return (
-        <Text>
-          Loading...
-        </Text>
-      )
-    } if (!list || list.length <= 0) {
+    if (!list || list.length <= 0) {
       return (
         <Text>
           No albums are fetched
@@ -46,10 +42,16 @@ class AlbumList extends Component {
       )
     }
 
+    if (loading) {
+      return (
+        <Text>
+          Loading...
+        </Text>
+      )
+    }
+
     return list.map(album => (
-      <Text key={album.url}>
-        {album.title}
-      </Text>
+      <AlbumDetail key={album.url} album={album} />
     ))
   }
 
