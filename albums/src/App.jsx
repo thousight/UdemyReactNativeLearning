@@ -1,15 +1,11 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- */
-
 import React from 'react'
 import {
   Platform,
   Text,
   View,
 } from 'react-native'
+
+import Header from './components/Header'
 
 import styles from './styles/App.style'
 
@@ -20,6 +16,7 @@ const instructions = Platform.select({
 
 const App = () => (
   <View style={styles.container}>
+    <Header name="Albums" />
     <Text style={styles.welcome}>
       Welcome to React Native!
     </Text>
