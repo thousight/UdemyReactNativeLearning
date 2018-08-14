@@ -19,6 +19,19 @@ const styles = StyleSheet.create({
     width: null,
     flex: 1,
   },
+  buttonContainer: {
+    flex: 1,
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  button: {
+  },
+  buttonText: {
+    fontSize: 16,
+    alignSelf: 'center',
+    color: '#007aff',
+  },
 })
 
 export default styles

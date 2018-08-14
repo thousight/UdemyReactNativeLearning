@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {
   Text,
-  View,
+  ScrollView,
 } from 'react-native'
 import axios from 'axios'
 
@@ -59,7 +59,7 @@ class AlbumList extends Component {
     const { error } = this.state
 
     return (
-      <View style={styles.listWrapper}>
+      <ScrollView style={styles.listWrapper}>
         {
           !error
             ? this.renderAlbum()
@@ -69,7 +69,7 @@ class AlbumList extends Component {
               </Text>
             )
         }
-      </View>
+      </ScrollView>
     )
   }
 }

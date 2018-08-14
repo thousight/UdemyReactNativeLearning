@@ -3,6 +3,7 @@ import {
   View,
   Text,
   Image,
+  TouchableOpacity,
 } from 'react-native'
 import PropTypes from 'prop-types'
 
@@ -29,11 +30,23 @@ const AlbumDetail = ({ album }) => (
         </Text>
       </View>
     </CardSection>
+
     <CardSection>
       <Image
         source={{ uri: album.image }}
         style={styles.albumImage}
       />
+    </CardSection>
+
+    <CardSection style={styles.buttonContainer}>
+      <TouchableOpacity
+        style={styles.button}
+        // onPress={}
+      >
+        <Text style={styles.buttonText}>
+          Buy
+        </Text>
+      </TouchableOpacity>
     </CardSection>
   </Card>
 )
