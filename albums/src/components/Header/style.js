@@ -11,8 +11,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     ...Platform.select({
       ios: {
-        paddingTop: 15,
-        height: 65,
+        paddingTop: 30,
+        height: 80,
         shadowColor: '#333333',
         shadowOffset: {
           width: 1,

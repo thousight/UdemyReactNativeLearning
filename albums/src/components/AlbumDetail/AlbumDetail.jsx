@@ -1,19 +1,19 @@
 import React from 'react'
 import {
   Text,
-  View,
 } from 'react-native'
 import PropTypes from 'prop-types'
 
+import Card from '../Card'
 import styles from './style'
 
 
 const AlbumDetail = ({ album }) => (
-  <View key={album.url} style={styles.detailView}>
+  <Card key={album.url} style={styles.detailView}>
     <Text>
       {album.title}
     </Text>
-  </View>
+  </Card>
 )
 
 AlbumDetail.propTypes = {
