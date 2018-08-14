@@ -1,18 +1,40 @@
 import React from 'react'
 import {
+  View,
   Text,
+  Image,
 } from 'react-native'
 import PropTypes from 'prop-types'
 
 import Card from '../Card'
+import CardSection from '../CardSection'
 import styles from './style'
 
 
 const AlbumDetail = ({ album }) => (
-  <Card key={album.url} style={styles.detailView}>
-    <Text>
-      {album.title}
-    </Text>
+  <Card key={album.url}>
+    <CardSection>
+      <View>
+        <Image
+          source={{ uri: album.thumbnail_image }}
+          style={styles.thumbnail}
+        />
+      </View>
+      <View style={styles.texts}>
+        <Text style={styles.title}>
+          {album.title}
+        </Text>
+        <Text>
+          {album.artist}
+        </Text>
+      </View>
+    </CardSection>
+    <CardSection>
+      <Image
+        source={{ uri: album.image }}
+        style={styles.albumImage}
+      />
+    </CardSection>
   </Card>
 )
 
