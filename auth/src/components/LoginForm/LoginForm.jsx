@@ -12,7 +12,6 @@ import {
 
 import styles from './style'
 
-
 class LoginForm extends Component {
   state = {
     email: '',

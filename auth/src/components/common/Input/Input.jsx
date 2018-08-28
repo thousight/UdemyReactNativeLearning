@@ -19,6 +19,7 @@ const Input = ({
     <TextInput
       value={value}
       onChangeText={onChange}
+      autoCapitalize="none"
       autoCorrect={false}
       placeholder={placeholder}
       style={styles.textInput}
