@@ -3,10 +3,11 @@ import {
   View,
   Text,
   Image,
-  TouchableOpacity,
+  Linking,
 } from 'react-native'
 import PropTypes from 'prop-types'
 
+import Button from '../Button'
 import Card from '../Card'
 import CardSection from '../CardSection'
 import styles from './style'
@@ -39,14 +40,10 @@ const AlbumDetail = ({ album }) => (
     </CardSection>
 
     <CardSection style={styles.buttonContainer}>
-      <TouchableOpacity
-        style={styles.button}
-        // onPress={}
-      >
-        <Text style={styles.buttonText}>
-          Buy
-        </Text>
-      </TouchableOpacity>
+      <Button
+        onPress={() => Linking.openURL(album.url)}
+        text="Buy Now"
+      />
     </CardSection>
   </Card>
 )
