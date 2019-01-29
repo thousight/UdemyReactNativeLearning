@@ -1,0 +1,10 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "albums/package.json",
+        "auth/package.json"
+      ]
+    }
+  }
+}
